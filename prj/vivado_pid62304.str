@@ -1,0 +1,557 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 04:59:54 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 62304
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Sep 25 23:28:05 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Ubuntu
+OS Version: 5.15.0-84-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: 0
+Screen size: 3840x2160
+Screen resolution (DPI): 200
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=24
+Scale size: 48
+
+Java version: 	11.0.11 64-bit
+Java home: 	/home/wei/soft/vivado2022.2/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/home/wei/soft/vivado2022.2/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	wei
+User home directory: /home/wei
+User working directory: /home/wei/work/fpga/corundum_13p/prj
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/wei/soft/vivado2022.2/Vivado
+HDI_APPROOT: /home/wei/soft/vivado2022.2/Vivado/2022.2
+RDI_DATADIR: /home/wei/soft/vivado2022.2/Vivado/2022.2/data
+RDI_BINDIR: /home/wei/soft/vivado2022.2/Vivado/2022.2/bin
+
+Vivado preferences file: /home/wei/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/wei/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/wei/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/home/wei/soft/vivado2022.2/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/wei/work/fpga/corundum_13p/prj/vivado.log
+Vivado journal file: 	/home/wei/work/fpga/corundum_13p/prj/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-62304-wei-virtual-machine
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /home/wei/soft/vivado2022.2/Vivado/2022.2
+RDI_BASEROOT: /home/wei/soft/vivado2022.2/Vivado
+RDI_BINROOT: /home/wei/soft/vivado2022.2/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/wei/soft/vivado2022.2/Vivado/2022.2/data
+RDI_INSTALLROOT: /home/wei/soft/vivado2022.2
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /home/wei/soft/vivado2022.2/Vivado/2022.2/lib/lnx64.o/Ubuntu/20:/home/wei/soft/vivado2022.2/Vivado/2022.2/lib/lnx64.o/Ubuntu:/home/wei/soft/vivado2022.2/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/wei/soft/vivado2022.2/Vitis/2022.2/bin:/home/wei/soft/vivado2022.2/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/wei/soft/vivado2022.2/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /home/wei/soft/vivado2022.2/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /home/wei/soft/vivado2022.2/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /home/wei/soft/vivado2022.2/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /home/wei/soft/vivado2022.2/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /home/wei/soft/vivado2022.2/Vivado/2022.2
+XILINX_SDK: /home/wei/soft/vivado2022.2/Vitis/2022.2
+XILINX_VITIS: /home/wei/soft/vivado2022.2/Vitis/2022.2
+XILINX_VIVADO: /home/wei/soft/vivado2022.2/Vivado/2022.2
+XILINX_VIVADO_HLS: /home/wei/soft/vivado2022.2/Vivado/2022.2
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,886 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,886 MB. GUI used memory: 85 MB. Current time: 9/25/23, 11:28:06 PM CST
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // u
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// 'g' command handler elapsed time: 5 seconds
+dismissDialog("New Project"); // f
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // u
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next >"); // JButton
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "prj"); // Q
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+// [GUI Memory]: 151 MB (+155759kb) [00:01:05]
+// [Engine Memory]: 1,898 MB (+1839184kb) [00:01:05]
+// [GUI Memory]: 159 MB (+450kb) [00:01:05]
+selectButton("NEXT", "Next >"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 1,963 MB. GUI used memory: 89 MB. Current time: 9/25/23, 11:29:06 PM CST
+// Elapsed time: 22 seconds
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xcvu13p-fhgb2104-2-e"); // OverlayTextField
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xcvu13p-fhgb2104-2-e ; 2104 ; 702 ; 1728000 ; 3456000 ; 2688 ; 1280 ; 12288 ;  ; 81920 ;  ; 0 ; 0 ; 76 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 76 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 16 ;  ; 12 ;  ;  ; 8 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 0, "xcvu13p-fhgb2104-2-e", 0); // n
+selectButton("NEXT", "Next >"); // JButton
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 2,004 MB (+10705kb) [00:01:32]
+// WARNING: HEventQueue.dispatchEvent() is taking  1439 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project prj . -part xcvu13p-fhgb2104-2-e 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/wei/soft/vivado2022.2/Vivado/2022.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 38 seconds
+dismissDialog("Create Project"); // bq
+dismissDialog("New Project"); // f
+// HMemoryUtils.trashcanNow. Engine heap size: 2,048 MB. GUI used memory: 93 MB. Current time: 9/25/23, 11:29:31 PM CST
+// Elapsed time: 10 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 2); // D
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// 'f' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_DIRECTORIES, "Add Directories"); // a
+setFolderChooser("/home/wei/work/fpga/corundum_13p/src");
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 13 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,080 MB. GUI used memory: 93 MB. Current time: 9/25/23, 11:30:21 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 2,113 MB (+10086kb) [00:02:29]
+// Elapsed time: 41 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_DIRECTORIES, "Add Directories"); // a
+setFolderChooser("/home/wei/work/fpga/corundum_13p/ip");
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 6 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {/home/wei/work/fpga/corundum_13p/ip/bd/cms/cms.bd /home/wei/work/fpga/corundum_13p/ip/cmac_gty_channel/cmac_gty_channel.xci /home/wei/work/fpga/corundum_13p/ip/ddr/ddr4_0.xci /home/wei/work/fpga/corundum_13p/ip/pcie4_uscale_plus_0/pcie4_uscale_plus_0.xci /home/wei/work/fpga/corundum_13p/ip/cmac_gty_full/cmac_gty_full.xci /home/wei/work/fpga/corundum_13p/ip/bd/top/cms_wrapper.v /home/wei/work/fpga/corundum_13p/ip/cmac_usplus/cmac_usplus.xci} 
+// Tcl Message: INFO: [Device 21-403] Loading part xcvu13p-fhgb2104-2-e 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,202 MB. GUI used memory: 98 MB. Current time: 9/25/23, 11:31:16 PM CST
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [Engine Memory]: 3,218 MB (+1047121kb) [00:03:21]
+// Elapsed time: 10 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,225 MB. GUI used memory: 98 MB. Current time: 9/25/23, 11:31:42 PM CST
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,301 MB. GUI used memory: 98 MB. Current time: 9/25/23, 11:32:01 PM CST
+// [Engine Memory]: 3,516 MB (+143862kb) [00:04:09]
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,556 MB. GUI used memory: 113 MB. Current time: 9/25/23, 11:32:11 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,566 MB. GUI used memory: 99 MB. Current time: 9/25/23, 11:32:42 PM CST
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files: Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 8828.965 ; gain = 1483.301 ; free physical = 7152 ; free virtual = 32287 
+// Elapsed time: 104 seconds
+dismissDialog("Add Sources"); // bq
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,660 MB. GUI used memory: 97 MB. Current time: 9/25/23, 11:33:11 PM CST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axis_ram_switch (axis_ram_switch.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga (fpga.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga (fpga.v)]", 2, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top fpga [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 3,697 MB (+5840kb) [00:05:25]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga (fpga.v)]", 1); // D
+selectButton((HResource) null, "Sources_FileSetView.filterMissingAction"); // v: TRUE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,706 MB. GUI used memory: 97 MB. Current time: 9/25/23, 11:33:31 PM CST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources]", 0); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, fpga (fpga.v)]", 1); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, fpga (fpga.v)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, eth_xcvr_phy_10g_gty_quad_wrapper (eth_xcvr_phy_10g_gty_quad_wrapper.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, ssio_sdr_out_diff (ssio_sdr_out_diff.v)]", 11, true, true, false, false, false, false); // D - Shift Key - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/eth_xcvr_phy_10g_gty_quad_wrapper.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/mqnic_core_axi.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_gmii_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_rgmii_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/mqnic_core_pcie_ptile.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/mqnic_core_pcie_s10.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_in_diff.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_out_diff.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_sdr_in_diff.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_sdr_out_diff.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/wei/work/fpga/corundum_13p/src/common/eth_xcvr_phy_10g_gty_quad_wrapper.v /home/wei/work/fpga/corundum_13p/src/common/mqnic_core_axi.v /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_gmii_fifo.v /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_rgmii_fifo.v /home/wei/work/fpga/corundum_13p/src/common/mqnic_core_pcie_ptile.v /home/wei/work/fpga/corundum_13p/src/common/mqnic_core_pcie_s10.v /home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_in_diff.v /home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_out_diff.v /home/wei/work/fpga/corundum_13p/src/eth/ssio_sdr_in_diff.v /home/wei/work/fpga/corundum_13p/src/eth/ssio_sdr_out_diff.v} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, eth_xcvr_phy_10g_gty_wrapper (eth_xcvr_phy_10g_gty_wrapper.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, ssio_ddr_out (ssio_ddr_out.v)]", 5, true, true, false, false, false, false); // D - Shift Key - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/eth_xcvr_phy_10g_gty_wrapper.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_gmii.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_rgmii.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_out.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/wei/work/fpga/corundum_13p/src/common/eth_xcvr_phy_10g_gty_wrapper.v /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_gmii.v /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_rgmii.v /home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_out.v} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, rgmii_phy_if (rgmii_phy_if.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, rgmii_phy_if (rgmii_phy_if.v)]", 2, true, true, false, false, false, false); // D - Shift Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, gmii_phy_if (gmii_phy_if.v)]", 3, true, true, false, false, false, false); // D - Shift Key - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/rgmii_phy_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/gmii_phy_if.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/wei/work/fpga/corundum_13p/src/eth/rgmii_phy_if.v /home/wei/work/fpga/corundum_13p/src/eth/gmii_phy_if.v} 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,755 MB. GUI used memory: 96 MB. Current time: 9/25/23, 11:34:01 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, ssio_ddr_in (ssio_ddr_in.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, ssio_sdr_out (ssio_sdr_out.v)]", 3, true, true, false, false, false, false); // D - Shift Key - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_in.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_sdr_out.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/wei/work/fpga/corundum_13p/src/eth/ssio_ddr_in.v /home/wei/work/fpga/corundum_13p/src/eth/ssio_sdr_out.v} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, iddr (iddr.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, oddr (oddr.v)]", 3, true, true, false, false, false, false); // D - Shift Key - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/iddr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/oddr.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/wei/work/fpga/corundum_13p/src/eth/iddr.v /home/wei/work/fpga/corundum_13p/src/eth/oddr.v} 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Missing Design Sources, fpga (fpga.v)]", 1); // D
+selectButton((HResource) null, "Sources_FileSetView.filterMissingAction"); // v: FALSE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axis_ram_switch (axis_ram_switch.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xgmii_interleave (xgmii_interleave.v)]", 89, false, true, false, false, false, false); // D - Shift Key
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_ram_switch.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_switch.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_eth_fcs_insert_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_eth_fcs_check_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_10g_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_phy_10g_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/stats_dma_if_axi.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_axi_master.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_s10_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axi_master.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_vfifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_frame_length_adjust_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_mii_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_ptile_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/tdma_ber.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_complete.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_complete_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_adapter.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_axil_adapter.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_crossbar.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_dma.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_dp_ram.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_register.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axil_adapter.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axil_register.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_cobs_encode.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_pipeline_register.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_if_axi.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_if_pcie_us.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_ram_demux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axi_dma.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_cdma_desc_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_dma_desc_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_interconnect.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_eth_fcs.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_eth_fcs_check.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_eth_fcs_insert.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/event_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_axi_dma_desc_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_arb_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/fpga.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/arbiter.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/arbiter.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/avst2axis.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_cdma.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_ram.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axil_dp_ram.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axil_ram.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/axis2avst.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_arb_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_broadcast.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_cobs_decode.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_crosspoint.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_frame_join.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_frame_len.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_ll_bridge.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_rate_limit.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_srl_fifo.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_srl_register.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_stat_counter.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_tap.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_psdpram_async.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_axis_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_axis_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_demux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/i2c_single_reg.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_demux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/led_sreg_driver.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/ll_axis_bridge.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/mqnic_port_map_phy_xgmii.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/mqnic_tx_scheduler_block_rr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_axil_master_minimal.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axil_master.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axis_rc_demux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/priority_encoder.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/priority_encoder.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ptp_tag_insert.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ptp_ts_extract.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_demux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/xgmii_deinterleave.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/xgmii_interleave.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_crossbar_rd (axi_crossbar_rd.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, tdma_ber_ch (tdma_ber_ch.v)]", 49, false, true, false, false, false, false); // D - Shift Key
+// HMemoryUtils.trashcanNow. Engine heap size: 3,816 MB. GUI used memory: 100 MB. Current time: 9/25/23, 11:34:41 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axi_crossbar_rd (axi_crossbar_rd.v)]", 2, true, true, false, false, false, false); // D - Shift Key - Node
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_crossbar_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_crossbar_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_ptile_if_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_10g.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_complete.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_complete_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_s10_if_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_ram_wr_rd_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_vfifo_raw.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_mii.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_phy_10g.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axil_interconnect.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_arb_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_ptile_if_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_s10_if_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_s10_msi.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_adapter_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_adapter_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_axil_adapter_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_axil_adapter_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_dma_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_dma_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_fifo_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_fifo_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_vfifo_dec.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_vfifo_enc.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axil_adapter_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axil_adapter_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_frame_length_adjust.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axis/axis_register.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_if_axi_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_if_axi_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_if_pcie_us_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/dma_if_pcie_us_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_axi_master_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_axi_master_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_ptile_cfg.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_s10_cfg.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axi_dma_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axi_dma_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axi_master_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axi_master_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_us_axis_cq_demux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/common/tdma_ber_ch.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axis_xgmii_tx_64 (axis_xgmii_tx_64.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, xgmii_baser_enc_64 (xgmii_baser_enc_64.v)]", 30, false, true, false, false, false, false); // D - Shift Key
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_xgmii_tx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_xgmii_tx_32.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/arp.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_tlp_fifo_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_1g.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_phy_10g_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_mac_phy_10g_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_xgmii_rx_32.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_xgmii_rx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_arb_mux.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/mii_phy_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_checksum_gen.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_checksum_gen_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_crossbar_addr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_ram_rd_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_ram_wr_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_register_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_register_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_vfifo_raw_rd.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/axi/axi_vfifo_raw_wr.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_ptile_fc_counter.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_ip_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_ip_rx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_ip_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/udp_ip_tx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/xgmii_baser_dec_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/xgmii_baser_enc_64.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axis_baser_tx_64 (axis_baser_tx_64.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ssio_sdr_in (ssio_sdr_in.v)]", 16, false, true, false, false, false, false); // D - Shift Key
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_baser_tx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/arp_cache.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_tx_if.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_baser_rx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_gmii_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/axis_gmii_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/arp_eth_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/arp_eth_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_eth_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_eth_rx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_eth_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ip_eth_tx_64.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/pcie/pcie_tlp_fc_count.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/ssio_sdr_in.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,879 MB. GUI used memory: 97 MB. Current time: 9/25/23, 11:35:06 PM CST
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, eth_phy_10g_rx_ber_mon (eth_phy_10g_rx_ber_mon.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lfsr (lfsr.v)]", 5, false, true, false, false, false, false); // D - Shift Key
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx_ber_mon.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx_frame_sync.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx_watchdog.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/wei/work/fpga/corundum_13p/src/eth/lfsr.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx_ber_mon.v /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx_frame_sync.v /home/wei/work/fpga/corundum_13p/src/eth/eth_phy_10g_rx_watchdog.v /home/wei/work/fpga/corundum_13p/src/eth/lfsr.v} 
+// [Engine Memory]: 3,890 MB (+8528kb) [00:07:23]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fpga (fpga.v)]", 1); // D
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+selectMenuItem(PAResourceCommand.PACommandNames_REPORT_IP_STATUS, "Report IP Status"); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // ag
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// Tcl Message: report_ip_status -name ip_status  
+// TclEventType: IP_SUMMARY_RESULTS
+dismissDialog("Report IP Status"); // bq
+// WARNING: HEventQueue.dispatchEvent() is taking  1283 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  352745 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  307841 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  349342 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,890 MB. GUI used memory: 98 MB. Current time: 9/26/23, 12:05:06 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,891 MB. GUI used memory: 98 MB. Current time: 9/26/23, 12:35:09 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,891 MB. GUI used memory: 88 MB. Current time: 9/26/23, 1:05:11 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1189 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3242077 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  10589642 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3711335 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1987421 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1441242 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1620377 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 231ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,891 MB. GUI used memory: 88 MB. Current time: 9/26/23, 7:22:27 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1175 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1163 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  946796 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,891 MB. GUI used memory: 88 MB. Current time: 9/26/23, 7:52:30 AM CST
