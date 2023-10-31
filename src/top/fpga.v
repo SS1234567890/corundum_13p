@@ -80,7 +80,7 @@ module fpga #
 
     // RAM configuration
     parameter DDR_CH = 4,
-    parameter DDR_ENABLE = 0,
+    parameter DDR_ENABLE = 1,
     parameter AXI_DDR_DATA_WIDTH = 512,
     parameter AXI_DDR_ADDR_WIDTH = 34,
     parameter AXI_DDR_ID_WIDTH = 8,
@@ -774,44 +774,44 @@ cms_axil_cdc_inst (
     .m_axil_rready(axil_cms_rready_int)
 );
 
-cms_wrapper
-cms_inst (
-    .aclk_ctrl_0(clk_50mhz_int),
-    .aresetn_ctrl_0(~rst_50mhz_int),
-    .interrupt_host_0(),
-    .qsfp0_int_l_0(qsfp0_intl),
-    .qsfp0_lpmode_0(),
-    .qsfp0_modprs_l_0(qsfp0_modprsl),
-    .qsfp0_modsel_l_0(),
-    .qsfp0_reset_l_0(),
-    .qsfp1_int_l_0(qsfp1_intl),
-    .qsfp1_lpmode_0(),
-    .qsfp1_modprs_l_0(qsfp1_modprsl),
-    .qsfp1_modsel_l_0(),
-    .qsfp1_reset_l_0(),
-    .s_axi_ctrl_0_araddr(axil_cms_araddr_int),
-    .s_axi_ctrl_0_arprot(axil_cms_arprot_int),
-    .s_axi_ctrl_0_arready(axil_cms_arready_int),
-    .s_axi_ctrl_0_arvalid(axil_cms_arvalid_int),
-    .s_axi_ctrl_0_awaddr(axil_cms_awaddr_int),
-    .s_axi_ctrl_0_awprot(axil_cms_awprot_int),
-    .s_axi_ctrl_0_awready(axil_cms_awready_int),
-    .s_axi_ctrl_0_awvalid(axil_cms_awvalid_int),
-    .s_axi_ctrl_0_bready(axil_cms_bready_int),
-    .s_axi_ctrl_0_bresp(axil_cms_bresp_int),
-    .s_axi_ctrl_0_bvalid(axil_cms_bvalid_int),
-    .s_axi_ctrl_0_rdata(axil_cms_rdata_int),
-    .s_axi_ctrl_0_rready(axil_cms_rready_int),
-    .s_axi_ctrl_0_rresp(axil_cms_rresp_int),
-    .s_axi_ctrl_0_rvalid(axil_cms_rvalid_int),
-    .s_axi_ctrl_0_wdata(axil_cms_wdata_int),
-    .s_axi_ctrl_0_wready(axil_cms_wready_int),
-    .s_axi_ctrl_0_wstrb(axil_cms_wstrb_int),
-    .s_axi_ctrl_0_wvalid(axil_cms_wvalid_int),
-    .satellite_gpio_0(msp_gpio),
-    .satellite_uart_0_rxd(),
-    .satellite_uart_0_txd()
-);
+//cms_wrapper
+//cms_inst (
+//    .aclk_ctrl_0(clk_50mhz_int),
+//    .aresetn_ctrl_0(~rst_50mhz_int),
+//    .interrupt_host_0(),
+//    .qsfp0_int_l_0(qsfp0_intl),
+//    .qsfp0_lpmode_0(),
+//    .qsfp0_modprs_l_0(qsfp0_modprsl),
+//    .qsfp0_modsel_l_0(),
+//    .qsfp0_reset_l_0(),
+//    .qsfp1_int_l_0(qsfp1_intl),
+//    .qsfp1_lpmode_0(),
+//    .qsfp1_modprs_l_0(qsfp1_modprsl),
+//    .qsfp1_modsel_l_0(),
+//    .qsfp1_reset_l_0(),
+//    .s_axi_ctrl_0_araddr(axil_cms_araddr_int),
+//    .s_axi_ctrl_0_arprot(axil_cms_arprot_int),
+//    .s_axi_ctrl_0_arready(axil_cms_arready_int),
+//    .s_axi_ctrl_0_arvalid(axil_cms_arvalid_int),
+//    .s_axi_ctrl_0_awaddr(axil_cms_awaddr_int),
+//    .s_axi_ctrl_0_awprot(axil_cms_awprot_int),
+//    .s_axi_ctrl_0_awready(axil_cms_awready_int),
+//    .s_axi_ctrl_0_awvalid(axil_cms_awvalid_int),
+//    .s_axi_ctrl_0_bready(axil_cms_bready_int),
+//    .s_axi_ctrl_0_bresp(axil_cms_bresp_int),
+//    .s_axi_ctrl_0_bvalid(axil_cms_bvalid_int),
+//    .s_axi_ctrl_0_rdata(axil_cms_rdata_int),
+//    .s_axi_ctrl_0_rready(axil_cms_rready_int),
+//    .s_axi_ctrl_0_rresp(axil_cms_rresp_int),
+//    .s_axi_ctrl_0_rvalid(axil_cms_rvalid_int),
+//    .s_axi_ctrl_0_wdata(axil_cms_wdata_int),
+//    .s_axi_ctrl_0_wready(axil_cms_wready_int),
+//    .s_axi_ctrl_0_wstrb(axil_cms_wstrb_int),
+//    .s_axi_ctrl_0_wvalid(axil_cms_wvalid_int),
+//    .satellite_gpio_0(msp_gpio),
+//    .satellite_uart_0_rxd(),
+//    .satellite_uart_0_txd()
+//);
 
 // configure SI5335 clock generators
 reg qsfp_refclk_reset_reg = 1'b1;

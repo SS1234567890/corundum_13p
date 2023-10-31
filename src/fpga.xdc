@@ -2,17 +2,17 @@
 # part: xcu250-figd2104-2-e
 
 # General configuration
-set_property CFGBVS GND                                [current_design]
-set_property CONFIG_VOLTAGE 1.8                        [current_design]
-set_property BITSTREAM.GENERAL.COMPRESS true           [current_design]
-set_property BITSTREAM.CONFIG.CONFIGFALLBACK ENABLE    [current_design]
+set_property CFGBVS GND [current_design]
+set_property CONFIG_VOLTAGE 1.8 [current_design]
+set_property BITSTREAM.GENERAL.COMPRESS true [current_design]
+set_property BITSTREAM.CONFIG.CONFIGFALLBACK ENABLE [current_design]
 set_property BITSTREAM.CONFIG.EXTMASTERCCLK_EN DISABLE [current_design]
-set_property BITSTREAM.CONFIG.CONFIGRATE 63.8          [current_design]
-set_property BITSTREAM.CONFIG.SPI_32BIT_ADDR YES       [current_design]
-set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4           [current_design]
-set_property BITSTREAM.CONFIG.SPI_FALL_EDGE YES        [current_design]
-set_property BITSTREAM.CONFIG.UNUSEDPIN PULLUP         [current_design]
-set_property BITSTREAM.CONFIG.OVERTEMPSHUTDOWN Enable  [current_design]
+set_property BITSTREAM.CONFIG.CONFIGRATE 63.8 [current_design]
+set_property BITSTREAM.CONFIG.SPI_32BIT_ADDR YES [current_design]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+set_property BITSTREAM.CONFIG.SPI_FALL_EDGE YES [current_design]
+set_property BITSTREAM.CONFIG.UNUSEDPIN PULLUP [current_design]
+set_property BITSTREAM.CONFIG.OVERTEMPSHUTDOWN Enable [current_design]
 
 set_operating_conditions -design_power_budget 160
 
@@ -48,7 +48,7 @@ set_property -dict {LOC BB20 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports {
 set_property -dict {LOC BB21 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports {led[2]}]
 
 set_false_path -to [get_ports {led[*]}]
-set_output_delay 0 [get_ports {led[*]}]
+set_output_delay 0.000 [get_ports {led[*]}]
 
 # Reset button
 #set_property -dict {LOC AL20 IOSTANDARD LVCMOS12} [get_ports reset]
@@ -63,7 +63,7 @@ set_output_delay 0 [get_ports {led[*]}]
 # set_property -dict {LOC AP20 IOSTANDARD LVCMOS12} [get_ports {sw[3]}]
 
 set_false_path -from [get_ports {sw[*]}]
-set_input_delay 0 [get_ports {sw[*]}]
+set_input_delay 0.000 [get_ports {sw[*]}]
 
 # UART
 #set_property -dict {LOC BF18 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports uart_txd]
@@ -75,10 +75,14 @@ set_input_delay 0 [get_ports {sw[*]}]
 #set_input_delay 0 [get_ports {uart_rxd}]
 
 # BMC
-set_property -dict {LOC BC21 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 4} [get_ports {msp_gpio[0]}]
-set_property -dict {LOC BB22 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 4} [get_ports {msp_gpio[1]}]
-set_property -dict {LOC BC22 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 4} [get_ports {msp_gpio[2]}]
-set_property -dict {LOC BA24 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 4} [get_ports {msp_gpio[3]}]
+set_property PACKAGE_PIN BC21 [get_ports {msp_gpio[0]}]
+set_property IOSTANDARD LVCMOS12 [get_ports {msp_gpio[0]}]
+set_property PACKAGE_PIN BB22 [get_ports {msp_gpio[1]}]
+set_property IOSTANDARD LVCMOS12 [get_ports {msp_gpio[1]}]
+set_property PACKAGE_PIN BC22 [get_ports {msp_gpio[2]}]
+set_property IOSTANDARD LVCMOS12 [get_ports {msp_gpio[2]}]
+set_property PACKAGE_PIN BA24 [get_ports {msp_gpio[3]}]
+set_property IOSTANDARD LVCMOS12 [get_ports {msp_gpio[3]}]
 # set_property -dict {LOC BB19 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 4} [get_ports {msp_uart_txd}]
 # set_property -dict {LOC BA19 IOSTANDARD LVCMOS12} [get_ports {msp_uart_rxd}]
 
@@ -88,33 +92,37 @@ set_property -dict {LOC BA24 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 4} [get_ports {
 # set_input_delay 0 [get_ports {msp_gpio[*] msp_uart_rxd}]
 
 # QSFP28 Interfaces
-set_property -dict {LOC E9  } [get_ports qsfp0_tx1_p] ;# MGTYTXP0_231 GTYE4_CHANNEL_X1Y44 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC E8  } [get_ports qsfp0_tx1_n] ;# MGTYTXN0_231 GTYE4_CHANNEL_X1Y44 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC D7  } [get_ports qsfp0_tx2_p] ;# MGTYTXP1_231 GTYE4_CHANNEL_X1Y45 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC D6  } [get_ports qsfp0_tx2_n] ;# MGTYTXN1_231 GTYE4_CHANNEL_X1Y45 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC C9  } [get_ports qsfp0_tx3_p] ;# MGTYTXP2_231 GTYE4_CHANNEL_X1Y46 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC C8  } [get_ports qsfp0_tx3_n] ;# MGTYTXN2_231 GTYE4_CHANNEL_X1Y46 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC A9  } [get_ports qsfp0_tx4_p] ;# MGTYTXP3_231 GTYE4_CHANNEL_X1Y47 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC A8  } [get_ports qsfp0_tx4_n] ;# MGTYTXN3_231 GTYE4_CHANNEL_X1Y47 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC E4  } [get_ports qsfp0_rx1_p] ;# MGTYRXP0_231 GTYE4_CHANNEL_X1Y44 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC E3  } [get_ports qsfp0_rx1_n] ;# MGTYRXN0_231 GTYE4_CHANNEL_X1Y44 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC D2  } [get_ports qsfp0_rx2_p] ;# MGTYRXP1_231 GTYE4_CHANNEL_X1Y45 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC D1  } [get_ports qsfp0_rx2_n] ;# MGTYRXN1_231 GTYE4_CHANNEL_X1Y45 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC C4  } [get_ports qsfp0_rx3_p] ;# MGTYRXP2_231 GTYE4_CHANNEL_X1Y46 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC C3  } [get_ports qsfp0_rx3_n] ;# MGTYRXN2_231 GTYE4_CHANNEL_X1Y46 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC A5  } [get_ports qsfp0_rx4_p] ;# MGTYRXP3_231 GTYE4_CHANNEL_X1Y47 / GTYE4_COMMON_X1Y11
-set_property -dict {LOC A4  } [get_ports qsfp0_rx4_n] ;# MGTYRXN3_231 GTYE4_CHANNEL_X1Y47 / GTYE4_COMMON_X1Y11
+set_property -dict {LOC E9} [get_ports qsfp0_tx1_p]
+set_property -dict {LOC E8} [get_ports qsfp0_tx1_n]
+set_property -dict {LOC D7} [get_ports qsfp0_tx2_p]
+set_property -dict {LOC D6} [get_ports qsfp0_tx2_n]
+set_property -dict {LOC C9} [get_ports qsfp0_tx3_p]
+set_property -dict {LOC C8} [get_ports qsfp0_tx3_n]
+set_property -dict {LOC A9} [get_ports qsfp0_tx4_p]
+set_property -dict {LOC A8} [get_ports qsfp0_tx4_n]
+set_property -dict {LOC E4} [get_ports qsfp0_rx1_p]
+set_property -dict {LOC E3} [get_ports qsfp0_rx1_n]
+set_property -dict {LOC D2} [get_ports qsfp0_rx2_p]
+set_property -dict {LOC D1} [get_ports qsfp0_rx2_n]
+set_property -dict {LOC C4} [get_ports qsfp0_rx3_p]
+set_property -dict {LOC C3} [get_ports qsfp0_rx3_n]
+set_property -dict {LOC A5} [get_ports qsfp0_rx4_p]
+set_property -dict {LOC A4} [get_ports qsfp0_rx4_n]
 
 #set_property -dict {LOC M11 } [get_ports qsfp0_mgt_refclk_0_p] ;# MGTREFCLK0P_231 from U14.4 via U43.13
 #set_property -dict {LOC M10 } [get_ports qsfp0_mgt_refclk_0_n] ;# MGTREFCLK0N_231 from U14.5 via U43.14
-set_property -dict {LOC D11 } [get_ports qsfp0_mgt_refclk_1_p] ;# MGTREFCLK1P_231 from U9.18
-set_property -dict {LOC D10 } [get_ports qsfp0_mgt_refclk_1_n] ;# MGTREFCLK1N_231 from U9.17
+set_property -dict {LOC D11} [get_ports qsfp0_mgt_refclk_1_p]
+set_property -dict {LOC D10} [get_ports qsfp0_mgt_refclk_1_n]
 
 # set_property -dict {LOC BC7 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports qsfp0_modsell]
-set_property -dict {LOC BA7 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp0_resetl]
-set_property -dict {LOC BC7 IOSTANDARD LVCMOS12 PULLUP true} [get_ports qsfp0_modprsl]
-set_property -dict {LOC BC8 IOSTANDARD LVCMOS12 PULLUP true} [get_ports qsfp0_intl]
-set_property -dict {LOC BB9 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp0_lpmode]
+set_property -dict {LOC BA7 IOSTANDARD LVCMOS12 SLEW SLOW} [get_ports qsfp0_resetl]
+set_property PACKAGE_PIN BC7 [get_ports qsfp0_modprsl]
+set_property IOSTANDARD LVCMOS12 [get_ports qsfp0_modprsl]
+set_property PULLUP true [get_ports qsfp0_modprsl]
+set_property PACKAGE_PIN BC8 [get_ports qsfp0_intl]
+set_property IOSTANDARD LVCMOS12 [get_ports qsfp0_intl]
+set_property PULLUP true [get_ports qsfp0_intl]
+set_property -dict {LOC BB9 IOSTANDARD LVCMOS12 SLEW SLOW} [get_ports qsfp0_lpmode]
 # set_property -dict {LOC AT22 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports qsfp0_refclk_reset]
 # set_property -dict {LOC AT20 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports {qsfp0_fs[0]}]
 # set_property -dict {LOC AU22 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports {qsfp0_fs[1]}]
@@ -122,7 +130,7 @@ set_property -dict {LOC BB9 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp0_lpm
 # 156.25 MHz MGT reference clock (from SI570)
 #create_clock -period 6.400 -name qsfp0_mgt_refclk_0 [get_ports qsfp0_mgt_refclk_0_p]
 
-# 156.25 MHz MGT reference clock (from 
+# 156.25 MHz MGT reference clock (from
 #create_clock -period 6.400 -name qsfp1_mgt_refclk_0 [get_ports qsfp1_mgt_refclk_0_p]
 
 # 156.25 MHz MGT reference clock (from SI5335, FS = 0b01)
@@ -131,7 +139,7 @@ set_property -dict {LOC BB9 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp0_lpm
 # 161.1328125 MHz MGT reference clock (from SI533, FS = 0b01)
 #create_clock -period 6.400 -name qsfp0_mgt_refclk_1 [get_ports qsfp0_mgt_refclk_1_p]
 
-# 161.1328125 MHz MGT reference clock (from 
+# 161.1328125 MHz MGT reference clock (from
 #create_clock -period 6.400 -name qsfp1_mgt_refclk_0 [get_ports qsfp1_mgt_refclk_0_p]
 
 # 156.25 MHz MGT reference clock (from SI5335, FS = 0b01)
@@ -140,37 +148,41 @@ set_property -dict {LOC BB9 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp0_lpm
 # 161.1328125 MHz MGT reference clock (from SI533, FS = 0b10)
 create_clock -period 6.206 -name qsfp0_mgt_refclk_1 [get_ports qsfp0_mgt_refclk_1_p]
 
-set_false_path -to [get_ports {qsfp0_modsell qsfp0_resetl qsfp0_lpmode }]
-set_output_delay 0 [get_ports {qsfp0_modsell qsfp0_resetl qsfp0_lpmode }]
+set_false_path -to [get_ports {qsfp0_modsell qsfp0_resetl qsfp0_lpmode}]
+set_output_delay 0.000 [get_ports {qsfp0_modsell qsfp0_resetl qsfp0_lpmode}]
 set_false_path -from [get_ports {qsfp0_modprsl qsfp0_intl}]
-set_input_delay 0 [get_ports {qsfp0_modprsl qsfp0_intl}]
+set_input_delay 0.000 [get_ports {qsfp0_modprsl qsfp0_intl}]
 
-set_property -dict {LOC AA9  } [get_ports qsfp1_tx1_p] ;# MGTYTXP0_230 GTYE4_CHANNEL_X1Y40 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC AA8  } [get_ports qsfp1_tx1_n] ;# MGTYTXN0_230 GTYE4_CHANNEL_X1Y40 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC Y7   } [get_ports qsfp1_tx2_p] ;# MGTYTXP1_230 GTYE4_CHANNEL_X1Y41 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC Y6   } [get_ports qsfp1_tx2_n] ;# MGTYTXN1_230 GTYE4_CHANNEL_X1Y41 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC W9   } [get_ports qsfp1_tx3_p] ;# MGTYTXP2_230 GTYE4_CHANNEL_X1Y42 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC W8   } [get_ports qsfp1_tx3_n] ;# MGTYTXN2_230 GTYE4_CHANNEL_X1Y42 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC V7   } [get_ports qsfp1_tx4_p] ;# MGTYTXP3_230 GTYE4_CHANNEL_X1Y43 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC V6   } [get_ports qsfp1_tx4_n] ;# MGTYTXN3_230 GTYE4_CHANNEL_X1Y43 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC AA4  } [get_ports qsfp1_rx1_p] ;# MGTYRXP0_230 GTYE4_CHANNEL_X1Y40 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC AA3  } [get_ports qsfp1_rx1_n] ;# MGTYRXN0_230 GTYE4_CHANNEL_X1Y40 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC Y2   } [get_ports qsfp1_rx2_p] ;# MGTYRXP1_230 GTYE4_CHANNEL_X1Y41 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC Y1   } [get_ports qsfp1_rx2_n] ;# MGTYRXN1_230 GTYE4_CHANNEL_X1Y41 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC W4   } [get_ports qsfp1_rx3_p] ;# MGTYRXP2_230 GTYE4_CHANNEL_X1Y42 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC W3   } [get_ports qsfp1_rx3_n] ;# MGTYRXN2_230 GTYE4_CHANNEL_X1Y42 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC V2   } [get_ports qsfp1_rx4_p] ;# MGTYRXP3_230 GTYE4_CHANNEL_X1Y43 / GTYE4_COMMON_X1Y10
-set_property -dict {LOC V1   } [get_ports qsfp1_rx4_n] ;# MGTYRXN3_230 GTYE4_CHANNEL_X1Y43 / GTYE4_COMMON_X1Y10
+set_property -dict {LOC AA9} [get_ports qsfp1_tx1_p]
+set_property -dict {LOC AA8} [get_ports qsfp1_tx1_n]
+set_property -dict {LOC Y7} [get_ports qsfp1_tx2_p]
+set_property -dict {LOC Y6} [get_ports qsfp1_tx2_n]
+set_property -dict {LOC W9} [get_ports qsfp1_tx3_p]
+set_property -dict {LOC W8} [get_ports qsfp1_tx3_n]
+set_property -dict {LOC V7} [get_ports qsfp1_tx4_p]
+set_property -dict {LOC V6} [get_ports qsfp1_tx4_n]
+set_property -dict {LOC AA4} [get_ports qsfp1_rx1_p]
+set_property -dict {LOC AA3} [get_ports qsfp1_rx1_n]
+set_property -dict {LOC Y2} [get_ports qsfp1_rx2_p]
+set_property -dict {LOC Y1} [get_ports qsfp1_rx2_n]
+set_property -dict {LOC W4} [get_ports qsfp1_rx3_p]
+set_property -dict {LOC W3} [get_ports qsfp1_rx3_n]
+set_property -dict {LOC V2} [get_ports qsfp1_rx4_p]
+set_property -dict {LOC V1} [get_ports qsfp1_rx4_n]
 
 #set_property -dict {LOC T11 } [get_ports qsfp1_mgt_refclk_0_p] ;# MGTREFCLK0P_230 from U14.4 via U43.15
 #set_property -dict {LOC T10 } [get_ports qsfp1_mgt_refclk_0_n] ;# MGTREFCLK0N_230 from U14.5 via U43.16
-set_property -dict {LOC Y11 } [get_ports qsfp1_mgt_refclk_1_p] ;# MGTREFCLK1P_230 from U12.18
-set_property -dict {LOC Y10 } [get_ports qsfp1_mgt_refclk_1_n] ;# MGTREFCLK1N_230 from U12.17
+set_property -dict {LOC Y11} [get_ports qsfp1_mgt_refclk_1_p]
+set_property -dict {LOC Y10} [get_ports qsfp1_mgt_refclk_1_n]
 # set_property -dict {LOC AY20 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports qsfp1_modsell]
-set_property -dict {LOC BB10 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp1_resetl]
-set_property -dict {LOC BB11 IOSTANDARD LVCMOS12 PULLUP true} [get_ports qsfp1_modprsl]
-set_property -dict {LOC BC11 IOSTANDARD LVCMOS12 PULLUP true} [get_ports qsfp1_intl]
-set_property -dict {LOC BB7 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp1_lpmode]
+set_property -dict {LOC BB10 IOSTANDARD LVCMOS12 SLEW SLOW} [get_ports qsfp1_resetl]
+set_property PACKAGE_PIN BB11 [get_ports qsfp1_modprsl]
+set_property IOSTANDARD LVCMOS12 [get_ports qsfp1_modprsl]
+set_property PULLUP true [get_ports qsfp1_modprsl]
+set_property PACKAGE_PIN BC11 [get_ports qsfp1_intl]
+set_property IOSTANDARD LVCMOS12 [get_ports qsfp1_intl]
+set_property PULLUP true [get_ports qsfp1_intl]
+set_property -dict {LOC BB7 IOSTANDARD LVCMOS12 SLEW SLOW} [get_ports qsfp1_lpmode]
 # set_property -dict {LOC AR21 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports qsfp1_refclk_reset]
 # set_property -dict {LOC AR22 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports {qsfp1_fs[0]}]
 # set_property -dict {LOC AU20 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports {qsfp1_fs[1]}]
@@ -178,7 +190,7 @@ set_property -dict {LOC BB7 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp1_lpm
 # 156.25 MHz MGT reference clock (from SI570)
 #create_clock -period 6.400 -name qsfp1_mgt_refclk_0 [get_ports qsfp1_mgt_refclk_0_p]
 
-# 156.25 MHz MGT reference clock (from 
+# 156.25 MHz MGT reference clock (from
 #create_clock -period 6.400 -name qsfp1_mgt_refclk_0 [get_ports qsfp1_mgt_refclk_0_p]
 
 # 156.25 MHz MGT reference clock (from SI5335, FS = 0b01)
@@ -187,7 +199,7 @@ set_property -dict {LOC BB7 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp1_lpm
 # 161.1328125 MHz MGT reference clock (from SI533, FS = 0b01)
 #create_clock -period 6.400 -name qsfp1_mgt_refclk_1 [get_ports qsfp1_mgt_refclk_1_p]
 
-# 161.1328125 MHz MGT reference clock (from 
+# 161.1328125 MHz MGT reference clock (from
 #create_clock -period 6.400 -name qsfp1_mgt_refclk_0 [get_ports qsfp1_mgt_refclk_0_p]
 
 # 156.25 MHz MGT reference clock (from SI5335, FS = 0b01)
@@ -196,48 +208,84 @@ set_property -dict {LOC BB7 IOSTANDARD LVCMOS12 SLEW SLOW } [get_ports qsfp1_lpm
 # 161.1328125 MHz MGT reference clock (from SI533, FS = 0b10)
 create_clock -period 6.206 -name qsfp1_mgt_refclk_1 [get_ports qsfp1_mgt_refclk_1_p]
 
-set_false_path -to [get_ports {qsfp1_modsell qsfp1_resetl qsfp1_lpmode }]
-set_output_delay 0 [get_ports {qsfp1_modsell qsfp1_resetl qsfp1_lpmode }]
+set_false_path -to [get_ports {qsfp1_modsell qsfp1_resetl qsfp1_lpmode}]
+set_output_delay 0.000 [get_ports {qsfp1_modsell qsfp1_resetl qsfp1_lpmode}]
 set_false_path -from [get_ports {qsfp1_modprsl qsfp1_intl}]
-set_input_delay 0 [get_ports {qsfp1_modprsl qsfp1_intl}]
+set_input_delay 0.000 [get_ports {qsfp1_modprsl qsfp1_intl}]
 
 # I2C interface
 #set_property -dict {LOC BF19 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports i2c_mux_reset]
-set_property -dict {LOC BF12 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports i2c_scl]
-set_property -dict {LOC BD9  IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports i2c_sda]
+set_property PACKAGE_PIN BF12 [get_ports i2c_scl]
+set_property IOSTANDARD LVCMOS12 [get_ports i2c_scl]
+set_property SLEW SLOW [get_ports i2c_scl]
+set_property -dict {LOC BD9 IOSTANDARD LVCMOS12 SLEW SLOW DRIVE 8} [get_ports i2c_sda]
 
 set_false_path -to [get_ports {i2c_sda i2c_scl}]
-set_output_delay 0 [get_ports {i2c_sda i2c_scl}]
+set_output_delay 0.000 [get_ports {i2c_sda i2c_scl}]
 set_false_path -from [get_ports {i2c_sda i2c_scl}]
-set_input_delay 0 [get_ports {i2c_sda i2c_scl}]
+set_input_delay 0.000 [get_ports {i2c_sda i2c_scl}]
 
 
 # PCIe Interface
+set_property -dict {LOC AF7} [get_ports {pcie_tx_p[0]}]
+set_property -dict {LOC AF7} [get_ports {pcie_tx_p[0]}]
 set_property -dict {LOC BF5  } [get_ports {pcie_tx_p[0]}]  ;# MGTYTXP3_227 GTYE4_CHANNEL_X1Y31 / GTYE4_COMMON_X1Y7
+set_property -dict {LOC AG9} [get_ports {pcie_tx_p[1]}]
+set_property -dict {LOC AG9} [get_ports {pcie_tx_p[1]}]
 set_property -dict {LOC BD5  } [get_ports {pcie_tx_p[1]}]  ;# MGTYTXP2_227 GTYE4_CHANNEL_X1Y30 / GTYE4_COMMON_X1Y7
+set_property -dict {LOC AH7} [get_ports {pcie_tx_p[2]}]
+set_property -dict {LOC AH7} [get_ports {pcie_tx_p[2]}]
 set_property -dict {LOC BB5  } [get_ports {pcie_tx_p[2]}]  ;# MGTYTXP1_227 GTYE4_CHANNEL_X1Y29 / GTYE4_COMMON_X1Y7
+set_property -dict {LOC AJ9} [get_ports {pcie_tx_p[3]}]
+set_property -dict {LOC AJ9} [get_ports {pcie_tx_p[3]}]
 set_property -dict {LOC AV7  } [get_ports {pcie_tx_p[3]}]  ;# MGTYTXP0_227 GTYE4_CHANNEL_X1Y28 / GTYE4_COMMON_X1Y7
+set_property -dict {LOC AK7} [get_ports {pcie_tx_p[4]}]
+set_property -dict {LOC AK7} [get_ports {pcie_tx_p[4]}]
 set_property -dict {LOC AU9  } [get_ports {pcie_tx_p[4]}]  ;# MGTYTXP3_226 GTYE4_CHANNEL_X1Y27 / GTYE4_COMMON_X1Y6
+set_property -dict {LOC AL9} [get_ports {pcie_tx_p[5]}]
+set_property -dict {LOC AL9} [get_ports {pcie_tx_p[5]}]
 set_property -dict {LOC AT7  } [get_ports {pcie_tx_p[5]}]  ;# MGTYTXP2_226 GTYE4_CHANNEL_X1Y26 / GTYE4_COMMON_X1Y6
+set_property -dict {LOC AM7} [get_ports {pcie_tx_p[6]}]
+set_property -dict {LOC AM7} [get_ports {pcie_tx_p[6]}]
 set_property -dict {LOC AR9  } [get_ports {pcie_tx_p[6]}]  ;# MGTYTXP1_226 GTYE4_CHANNEL_X1Y25 / GTYE4_COMMON_X1Y6
+set_property -dict {LOC AN9} [get_ports {pcie_tx_p[7]}]
+set_property -dict {LOC AN9} [get_ports {pcie_tx_p[7]}]
 set_property -dict {LOC AP7  } [get_ports {pcie_tx_p[7]}]  ;# MGTYTXP0_226 GTYE4_CHANNEL_X1Y24 / GTYE4_COMMON_X1Y6
+set_property -dict {LOC AP7} [get_ports {pcie_tx_p[8]}]
+set_property -dict {LOC AP7} [get_ports {pcie_tx_p[8]}]
 set_property -dict {LOC AN9  } [get_ports {pcie_tx_p[8]}]  ;# MGTYTXP3_225 GTYE4_CHANNEL_X1Y23 / GTYE4_COMMON_X1Y5
+set_property -dict {LOC AR9} [get_ports {pcie_tx_p[9]}]
+set_property -dict {LOC AR9} [get_ports {pcie_tx_p[9]}]
 set_property -dict {LOC AM7  } [get_ports {pcie_tx_p[9]}]  ;# MGTYTXP2_225 GTYE4_CHANNEL_X1Y22 / GTYE4_COMMON_X1Y5
+set_property -dict {LOC AT7} [get_ports {pcie_tx_p[10]}]
+set_property -dict {LOC AT7} [get_ports {pcie_tx_p[10]}]
 set_property -dict {LOC AL9  } [get_ports {pcie_tx_p[10]}] ;# MGTYTXP1_225 GTYE4_CHANNEL_X1Y21 / GTYE4_COMMON_X1Y5
+set_property -dict {LOC AU9} [get_ports {pcie_tx_p[11]}]
+set_property -dict {LOC AU9} [get_ports {pcie_tx_p[11]}]
 set_property -dict {LOC AK7  } [get_ports {pcie_tx_p[11]}] ;# MGTYTXP0_225 GTYE4_CHANNEL_X1Y20 / GTYE4_COMMON_X1Y5
+set_property -dict {LOC AV7} [get_ports {pcie_tx_p[12]}]
+set_property -dict {LOC AV7} [get_ports {pcie_tx_p[12]}]
 set_property -dict {LOC AJ9  } [get_ports {pcie_tx_p[12]}] ;# MGTYTXP3_224 GTYE4_CHANNEL_X1Y19 / GTYE4_COMMON_X1Y4
+set_property -dict {LOC BB5} [get_ports {pcie_tx_p[13]}]
+set_property -dict {LOC BB5} [get_ports {pcie_tx_p[13]}]
 set_property -dict {LOC AH7  } [get_ports {pcie_tx_p[13]}] ;# MGTYTXP2_224 GTYE4_CHANNEL_X1Y18 / GTYE4_COMMON_X1Y4
+set_property -dict {LOC BD5} [get_ports {pcie_tx_p[14]}]
+set_property -dict {LOC BD5} [get_ports {pcie_tx_p[14]}]
 set_property -dict {LOC AG9  } [get_ports {pcie_tx_p[14]}] ;# MGTYTXP1_224 GTYE4_CHANNEL_X1Y17 / GTYE4_COMMON_X1Y4
+set_property -dict {LOC BF5} [get_ports {pcie_tx_p[15]}]
+set_property -dict {LOC BF5} [get_ports {pcie_tx_p[15]}]
 set_property -dict {LOC AF7  } [get_ports {pcie_tx_p[15]}] ;# MGTYTXP0_224 GTYE4_CHANNEL_X1Y16 / GTYE4_COMMON_X1Y4
-set_property -dict {LOC AK11 } [get_ports pcie_refclk_p] ;# MGTREFCLK0P_226
-set_property -dict {LOC AR26 IOSTANDARD LVCMOS12 PULLUP true} [get_ports pcie_reset_n]
+set_property -dict {LOC AK11} [get_ports pcie_refclk_p]
+set_property PACKAGE_PIN AR26 [get_ports pcie_reset_n]
+set_property IOSTANDARD LVCMOS12 [get_ports pcie_reset_n]
+set_property PULLUP true [get_ports pcie_reset_n]
 
 
 # 100 MHz MGT reference clock
-create_clock -period 10 -name pcie_mgt_refclk_1 [get_ports pcie_refclk_p]
+create_clock -period 10.000 -name pcie_mgt_refclk_1 [get_ports pcie_refclk_p]
 
-set_false_path -from [get_ports {pcie_reset_n}]
-set_input_delay 0 [get_ports {pcie_reset_n}]
+set_false_path -from [get_ports pcie_reset_n]
+set_input_delay 0.000 [get_ports pcie_reset_n]
 
 # DDR4 C0
 
@@ -366,6 +414,7 @@ set_property PACKAGE_PIN B15 [get_ports {c0_ddr4_dqs_t[5]}]
 set_property PACKAGE_PIN E18 [get_ports {c0_ddr4_dqs_t[6]}]
 set_property PACKAGE_PIN D18 [get_ports {c0_ddr4_dqs_t[7]}]
 set_property PACKAGE_PIN P24 [get_ports {c0_ddr4_dqs_t[8]}]
+
 
 # DDR4 C1
 set_property PACKAGE_PIN J26 [get_ports c1_sys_clk_p]
