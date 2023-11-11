@@ -15,13 +15,13 @@
 module fpga #
 (
     // FW and board IDs
-    parameter FPGA_ID = 32'h4B57093,
+    parameter FPGA_ID = 32'h04b57093,
     parameter FW_ID = 32'h00000000,
     parameter FW_VER = 32'h00_00_01_00,
     parameter BOARD_ID = 32'h10ee_90fa,
     parameter BOARD_VER = 32'h01_00_00_00,
-    parameter BUILD_DATE = 32'd602976000,
-    parameter GIT_HASH = 32'hdce357bf,
+    parameter BUILD_DATE = 32'd1696390525,
+    parameter GIT_HASH = 32'hed4a26e2,
     parameter RELEASE_INFO = 32'h00000000,
 
     // Structural configuration
@@ -39,26 +39,26 @@ module fpga #
     parameter PTP_CLOCK_CDC_PIPELINE = 0,
     parameter PTP_PORT_CDC_PIPELINE = 0,
     parameter PTP_PEROUT_ENABLE = 0,
-    parameter PTP_PEROUT_COUNT = 1,
+    parameter PTP_PEROUT_COUNT = 0,
 
     // Queue manager configuration
     parameter EVENT_QUEUE_OP_TABLE_SIZE = 32,
     parameter TX_QUEUE_OP_TABLE_SIZE = 32,
     parameter RX_QUEUE_OP_TABLE_SIZE = 32,
     parameter CQ_OP_TABLE_SIZE = 32,
-    parameter EQN_WIDTH = 5,
+    parameter EQN_WIDTH = 6,
     parameter TX_QUEUE_INDEX_WIDTH = 13,
     parameter RX_QUEUE_INDEX_WIDTH = 8,
-    parameter CQN_WIDTH = (TX_QUEUE_INDEX_WIDTH > RX_QUEUE_INDEX_WIDTH ? TX_QUEUE_INDEX_WIDTH : RX_QUEUE_INDEX_WIDTH) + 1,
+    parameter CQN_WIDTH = 14,
     parameter EQ_PIPELINE = 3,
-    parameter TX_QUEUE_PIPELINE = 3+(TX_QUEUE_INDEX_WIDTH > 12 ? TX_QUEUE_INDEX_WIDTH-12 : 0),
-    parameter RX_QUEUE_PIPELINE = 3+(RX_QUEUE_INDEX_WIDTH > 12 ? RX_QUEUE_INDEX_WIDTH-12 : 0),
-    parameter CQ_PIPELINE = 3+(CQN_WIDTH > 12 ? CQN_WIDTH-12 : 0),
+    parameter TX_QUEUE_PIPELINE = 4,
+    parameter RX_QUEUE_PIPELINE = 3,
+    parameter CQ_PIPELINE = 5,
 
     // TX and RX engine configuration
     parameter TX_DESC_TABLE_SIZE = 32,
     parameter RX_DESC_TABLE_SIZE = 32,
-    parameter RX_INDIR_TBL_ADDR_WIDTH = RX_QUEUE_INDEX_WIDTH > 8 ? 8 : RX_QUEUE_INDEX_WIDTH,
+    parameter RX_INDIR_TBL_ADDR_WIDTH = 8,
 
     // Scheduler configuration
     parameter TX_SCHEDULER_OP_TABLE_SIZE = TX_DESC_TABLE_SIZE,
@@ -102,7 +102,7 @@ module fpga #
     parameter DMA_IMM_WIDTH = 32,
     parameter DMA_LEN_WIDTH = 16,
     parameter DMA_TAG_WIDTH = 16,
-    parameter RAM_ADDR_WIDTH = $clog2(TX_RAM_SIZE > RX_RAM_SIZE ? TX_RAM_SIZE : RX_RAM_SIZE),
+    parameter RAM_ADDR_WIDTH = 17,
     parameter RAM_PIPELINE = 2,
 
     // PCIe interface configuration
@@ -198,10 +198,10 @@ module fpga #
     input  wire         qsfp0_mgt_refclk_1_p,
     input  wire         qsfp0_mgt_refclk_1_n,
     // output wire         qsfp0_modsell,
-    output wire         qsfp0_resetl,
-    input  wire         qsfp0_modprsl,
-    input  wire         qsfp0_intl,
-    output wire         qsfp0_lpmode,
+(* MARK_DEBUG="true" *)    output wire         qsfp0_resetl,
+(* MARK_DEBUG="true" *)    input  wire         qsfp0_modprsl,
+(* MARK_DEBUG="true" *)    input  wire         qsfp0_intl,
+(* MARK_DEBUG="true" *)    output wire         qsfp0_lpmode,
     // output wire         qsfp0_refclk_reset,
     // output wire [1:0]   qsfp0_fs,
 
@@ -226,10 +226,10 @@ module fpga #
     input  wire         qsfp1_mgt_refclk_1_p,
     input  wire         qsfp1_mgt_refclk_1_n,
     // output wire         qsfp1_modsell,
-    output wire         qsfp1_resetl,
-    input  wire         qsfp1_modprsl,
-    input  wire         qsfp1_intl,
-    output wire         qsfp1_lpmode,
+(* MARK_DEBUG="true" *)    output wire         qsfp1_resetl,
+(* MARK_DEBUG="true" *)    input  wire         qsfp1_modprsl,
+(* MARK_DEBUG="true" *)    input  wire         qsfp1_intl,
+(* MARK_DEBUG="true" *)    output wire         qsfp1_lpmode,
     // output wire         qsfp1_refclk_reset,
     // output wire [1:0]   qsfp1_fs,
 
